@@ -23,3 +23,17 @@ Preserved boundary observations include:
 - Outer DCBR minus FINAL_QDIFFCL confidence intervals cross zero on both datasets.
 - Paderborn measurement Macro-F1: D-only `0.5278`; matched-budget Uniform `0.5308`.
 - TEP critical-ratio Macro-F1: `0.9020` at 0.20, `0.8861` at 0.30, and `0.9039` at 0.40.
+
+## Paired-CI consistency audit
+
+The authoritative source for the preregistered outer-protocol paired confidence intervals is `results/outer/paper_final_outer_bootstrap.csv`. Its frozen 2,000-repeat WELL/Run bootstrap outputs are:
+
+| Comparison | Authoritative outer CI | Post-hoc Table S1 CI |
+|---|---:|---:|
+| 3W, DCBR vs FINAL_QDIFFCL | `[-0.0290, +0.0118]` | `[-0.0301, +0.0112]` |
+| TEP, DCBR vs FINAL_QDIFFCL | `[-0.0013, +0.0020]` | `[-0.0014, +0.0021]` |
+| 3W, FreRA vs FINAL_QDIFFCL | `[-0.0514, +0.0415]` | `[-0.0505, +0.0379]` |
+
+The point estimates, paired cells, positive/non-worse counts, and worst-cell deltas agree. The interval endpoints differ because the post-hoc extension reran the same 2,000-repeat group-aware bootstrap in `results/posthoc_baselines/posthoc_recent_baselines_5seed_bootstrap.csv`. Both pipelines use base seed `90317`, but derive the per-comparison random seed from the method's index in their respective comparison lists. Adding TF-C, SoftCLT, TS2Vec, and AutoTCL before the frozen reference methods changes that index and therefore changes the finite bootstrap draws. This is a second bootstrap run, not a change in predictions or observed effects.
+
+Recommendation: use the intervals from `results/outer/paper_final_outer_bootstrap.csv` for Sec. IV-D and every claim about the preregistered outer protocol. Retain the post-hoc intervals in Table S1 as provenance-faithful outputs of the separately labeled post-hoc summarization; if a single interval set is required across the paper and supplement, the paper author should decide whether Table S1 will quote the outer intervals instead. No result file was modified by this audit.

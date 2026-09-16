@@ -1,0 +1,22 @@
+version: 2
+status: PADERBORN_FREQUENCY_GRID_GO
+policy: sample_index_resample
+target_hz: 64000
+target_duration_seconds: 4.0
+target_length: 256000
+input_channel: vibration_1
+formal_candidates:
+- timestamp_uniform_interpolation
+- sample_index_resample
+diagnostic_control: crop_edge_pad
+preservation_thresholds:
+  rms_ratio_median_absolute_error_max: 0.02
+  welch_psd_cosine_p05_min: 0.95
+  log_psd_correlation_p05_min: 0.9
+  band_energy_max_relative_error_p95_max: 0.1
+  dominant_frequency_displacement_hz_p95_max: 32.0
+fit_scope: none; fixed acquisition metadata and signal preservation only
+uses_labels: false
+uses_split: false
+uses_validation_or_test_metrics: false
+raw_data_mutated: false

@@ -1,0 +1,29 @@
+mode: paper_final_freeze_pre_outer
+frozen: true
+git_freeze:
+  tag: paper-final-freeze-pre-outer-v4
+  outer_branch: exp/paper-final-outer
+  commit_sha_recorded_in_outer_manifest_after_commit: true
+hashes:
+  configs:
+    - configs/qdiffcl_final.yaml
+    - configs/domain_calibrated_budget_routing_final.yaml
+    - configs/paper_final_protocol.yaml
+    - configs/paper_contrastive_ablation.yaml
+    - configs/paper_ratio_sensitivity.yaml
+    - configs/paper_efficiency.yaml
+    - configs/paper_fault_trajectory.yaml
+    - configs/paper_final_outer.yaml
+  splits:
+    - configs/protocol_manifests/dry_run_manifest.json
+    - configs/protocol_manifests/leakage_audit.json
+    - configs/protocol_manifests/fixed_diffusion_views_manifest.json
+    - configs/protocol_manifests/3w_grouped_split_manifest.json
+    - configs/protocol_manifests/pre_amendment_dry_run_manifest.json
+    - configs/protocol_manifests/protocol_amendment_audit.json
+output:
+  manifest: configs/protocol_manifests/freeze_manifest.json
+  report: docs/paper_final_freeze.md
+audit:
+  outer_training_run: false
+  outer_test_metrics_read: false

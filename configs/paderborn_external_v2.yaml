@@ -1,0 +1,86 @@
+mode: paderborn_external_validation_v2
+frozen: true
+status: PADERBORN_PROTOCOL_FROZEN_V2
+python: E:/anaconda/envs/qdiffcl/python.exe
+device: cuda
+data_root: E:/Datasets/Paderborn_Bearing/raw
+sampling_policy: configs/paderborn_sampling_policy_v2.yaml
+split_manifest: configs/paderborn_primary_5fold.csv
+protocol_lock_subject: 合并Q-DiffCL近期实验支线证据并冻结Paderborn外部验证协议
+protocol_lock_commit: 6464acf2ef6878e68df3e7ada0532ee9c5c625b2
+
+task:
+  classes: [healthy, real_outer_ring, real_inner_ring]
+  split_unit: bearing
+  folds: 5
+  input_channel: vibration_1
+
+window:
+  length: 4096
+  stride: 2048
+  windows_per_measurement: 16
+  selection: evenly_spaced_from_complete_stride_grid
+
+normalization:
+  policy: train_fold_global_zscore
+  fit_scope: training_bearings_only
+
+methods:
+  - NO_AUG
+  - UNIFORM_DIFFUSION
+  - QDIFFCL_D_ONLY_EXTERNAL_COMPONENT
+seeds: [7, 42, 2026]
+
+criticality:
+  component: D_only
+  critical_ratio: 0.30
+  bootstrap_repeats: 64
+  bootstrap_seed: 22042
+  reliability: leave_one_training_bearing_out
+
+spectral_diffusion:
+  diffusion_steps: 50
+  t_uniform: 3
+  t_critical: 1
+  t_noncritical: 5
+  preserve_phase: true
+  preserve_dc: true
+  noise_structure: iid
+  sampling_seed_offset: 61000
+  clip_quantile: 0.999
+  matched_budget_absolute_tolerance: 1.0e-7
+
+training:
+  backbone: TCN
+  contrastive: Hard SupCon
+  batching: original
+  probe: frozen linear probe
+  model: {name: tcn, hidden_channels: 32, projection_dim: 32, levels: 3}
+  batch_size: 128
+  learning_rate: 0.001
+  epochs: 8
+  early_stopping_patience: 8
+  probe_epochs: 8
+  probe_early_stopping_patience: 8
+  temperature: 0.1
+
+evaluation:
+  primary: measurement_macro_f1
+  secondary: [measurement_balanced_accuracy, bearing_macro_f1, bearing_accuracy, per_class, confusion_matrix, per_condition]
+  excluded: [early_recall, detection_delay, onset_far]
+
+statistics:
+  paired_unit: seed_fold
+  bootstrap_repeats: 2000
+  bootstrap_seed: 92026
+  confidence: 0.95
+  support_rule: mean_delta_positive_and_ci_lower_positive
+  mixed_rule: mean_delta_positive_but_ci_crosses_zero_or_metric_disagreement
+
+runtime:
+  minimum_available_ram_mib: 2048
+  one_cell_at_a_time: true
+  cache_root: outputs/paderborn_external_v2/cache
+  output_root: outputs/paderborn_external_v2
+  status: outputs/paderborn_external_v2/runtime_status.json
+  log_dir: analysis/logs/paderborn_external_v2

@@ -1,0 +1,13 @@
+{
+  "python": "E:\\anaconda\\envs\\qdiffcl\\python.exe",
+  "python_version": "3.10.20",
+  "numpy": "2.2.6",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "driver": "610.88",
+  "branch": "exp/qdiffcl-r-reliability-correctness",
+  "HEAD": "560c2580368505276fe4ef501f48d5205c1bdcf4",
+  "timestamp": "2026-09-09T18:15:16.740855+00:00"
+}

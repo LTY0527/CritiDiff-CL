@@ -1,0 +1,32 @@
+{
+  "n_cells": 15,
+  "bootstrap_repeats": 1000,
+  "bootstrap_seed": 22042,
+  "pooled_definition": "equal-weight mean of dataset-specific Spearman associations",
+  "bootstrap_unit": "outer, dataset-stratified, multiplicity retained",
+  "test_rows_used": false,
+  "3W": {
+    "spearman": 0.4068381021724862,
+    "n": 9,
+    "q05": -0.4156194667729049,
+    "q50": 0.4068381021724862,
+    "q95": 0.9697787558034447,
+    "P_assoc_lt_zero": 0.245
+  },
+  "TEP": {
+    "spearman": -0.6,
+    "n": 6,
+    "q05": -1.0,
+    "q50": -0.6363636363636362,
+    "q95": -0.0909090909090909,
+    "P_assoc_lt_zero": 0.963
+  },
+  "pooled": {
+    "spearman": -0.09658094891375688,
+    "n": 15,
+    "q05": -0.6169006424773614,
+    "q50": -0.10950774439575192,
+    "q95": 0.4394348324471769,
+    "P_assoc_lt_zero": 0.636
+  }
+}

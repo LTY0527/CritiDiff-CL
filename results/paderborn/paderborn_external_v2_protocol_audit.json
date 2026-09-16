@@ -1,0 +1,34 @@
+{
+  "status": "PADERBORN_PROTOCOL_AUDIT_PASS",
+  "config_sha256": "624ffd5f0b26ece4b232d9df20272eba2c1985d2ac7305ec2fccd54bdcc435ed",
+  "frequency_grid_gate": "PADERBORN_FREQUENCY_GRID_GO",
+  "split_unit": "bearing",
+  "folds": 5,
+  "split_rows": 75,
+  "train_bearings_per_fold": 9,
+  "validation_bearings_per_fold": 3,
+  "test_bearings_per_fold": 3,
+  "bearing_overlap": false,
+  "methods": [
+    "NO_AUG",
+    "UNIFORM_DIFFUSION",
+    "QDIFFCL_D_ONLY_EXTERNAL_COMPONENT"
+  ],
+  "seeds": [
+    7,
+    42,
+    2026
+  ],
+  "formal_cells": 45,
+  "component": "D_only",
+  "E_used": false,
+  "pseudo_E": false,
+  "normalization_fit_scope": "training_bearings_only",
+  "frequency_scaler_fit_scope": "training_bearings_only",
+  "matched_budget_absolute_error": 0.0,
+  "matched_budget_pass": true,
+  "test_metrics_produced_before_lock": false,
+  "test_metrics_used_for_protocol_selection": false,
+  "archive_branch_merged": false,
+  "generated_at": "2026-09-10T12:47:24.894792+00:00"
+}

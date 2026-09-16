@@ -1,0 +1,468 @@
+{
+  "generated_at": "2026-09-09T18:15:16.787109+00:00",
+  "legal_cells": 15,
+  "tep10": "E_IDENTIFIABILITY_HOLD",
+  "data_regime_raw_modified": false,
+  "artifacts": [
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31001,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31001/_context/audit.json",
+      "size_bytes": 11667,
+      "sha256": "3fa41ae50ca5b6f7592dfe02fd8e8c6158ee531f0963f1b51d41c3548b4a539a",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31001,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31001/_context/criticality.npz",
+      "size_bytes": 10019,
+      "sha256": "dee6ae4d3c5e9049b49243b98eb5d8a870a108994a089362408dffeb6cf2a38b",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31001,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31001/rho_selection.json",
+      "size_bytes": 1606,
+      "sha256": "393aaa6d6e082ca8ead7b506759227e9a4ca9416b317cd8f2d31485843ea7ff0",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31002,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31002/_context/audit.json",
+      "size_bytes": 17754,
+      "sha256": "c06bae01547b581b47cb7695c1a4d2e822baabf41bd1b5df59a00130d48a3825",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31002,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31002/_context/criticality.npz",
+      "size_bytes": 9842,
+      "sha256": "60dca81d85e01357635d7056195789b06fdc319282a434fbcc00a834a07b9dc0",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31002,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31002/rho_selection.json",
+      "size_bytes": 1618,
+      "sha256": "8ca809580841ee668dc1f634db59e4ac746764f5241e8f7a1d24d62986124ea7",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31003,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31003/_context/audit.json",
+      "size_bytes": 23500,
+      "sha256": "a70d2444905db6d3443a6e517469b815912565332b282d78bf7be99c65121ad1",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31003,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31003/_context/criticality.npz",
+      "size_bytes": 10133,
+      "sha256": "4a3ccc6021f50e74c85fab1aceefd1738e99f59844cc648568a52ca430eda048",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 1.0,
+      "outer": 31003,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f100/outer_31003/rho_selection.json",
+      "size_bytes": 1593,
+      "sha256": "fc0f598e0e4ab6d0d5b2e787ecdd76a2711087704881042ebe1374e3a01a8211",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31001,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31001/_context/audit.json",
+      "size_bytes": 5706,
+      "sha256": "040fc1e273e0bf5250366c3dc01d624e14965a4a6227c38433f5c694c144202d",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31001,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31001/_context/criticality.npz",
+      "size_bytes": 9751,
+      "sha256": "b4df2cb7ff773a2204a8eeeaa27b482a0091a131ecef92f9c8533c11b76f4d37",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31001,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31001/rho_selection.json",
+      "size_bytes": 1594,
+      "sha256": "4233f0c60c1bb35d270c2fc589e67d05500f45bf248dd5ae5d00309f6867f783",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31002,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31002/_context/audit.json",
+      "size_bytes": 7216,
+      "sha256": "4d4f97b986e058323262dbe7567d7785a51cf5f7092f8f3896d4864db5f65567",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31002,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31002/_context/criticality.npz",
+      "size_bytes": 9623,
+      "sha256": "c5975480d20962acc085ae47054b08ddca1c80269756ee019fe188997f3e0308",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31002,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31002/rho_selection.json",
+      "size_bytes": 1620,
+      "sha256": "d0fc41bc7a5bc79e75469e87149ccb66440276c425abbd6afae6b87e184cc9a9",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31003,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31003/_context/audit.json",
+      "size_bytes": 8677,
+      "sha256": "0d4dd6b37a90dbad4ce3c7a7106a10f2651ffedea19c1b0fd23b2e7a66843046",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31003,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31003/_context/criticality.npz",
+      "size_bytes": 9067,
+      "sha256": "67ecaf49628b082c1f2c8418ec9b5869a4591fbe737f0784f63e662ef1ab674f",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.25,
+      "outer": 31003,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f025/outer_31003/rho_selection.json",
+      "size_bytes": 1637,
+      "sha256": "91328368f4ba9c8564edf02a6b598be0b3fadc7cf6e3b63cd2f99d00c16ca8af",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31001,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31001/_context/audit.json",
+      "size_bytes": 4516,
+      "sha256": "a0c1aa773e8749ab111ab73fa2001050428cc595c9691b5c2f62edaa66913632",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31001,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31001/_context/criticality.npz",
+      "size_bytes": 9214,
+      "sha256": "a8e2e813ae9adf771a2de67cc1209658140da808251da06020f8d1e5f36e8710",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31001,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31001/rho_selection.json",
+      "size_bytes": 1618,
+      "sha256": "f6f222e1afb471c34556545233dc03f9c82458373839b78de903e7f32d795736",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31002,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31002/_context/audit.json",
+      "size_bytes": 5100,
+      "sha256": "f49dd3f04144e23837b8f055e957f1636bc6c6ab5b432d68907a985368183f74",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31002,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31002/_context/criticality.npz",
+      "size_bytes": 9576,
+      "sha256": "0927c318116bb9ab8c1696ea7b4afee8c3a00621b47eb44ac6f8b92c4b3ef6a4",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31002,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31002/rho_selection.json",
+      "size_bytes": 1633,
+      "sha256": "0246a8e95b59513eb0a9581157ff170ab284be7418e34b33bf8e88473726956c",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31003,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31003/_context/audit.json",
+      "size_bytes": 5683,
+      "sha256": "9f9b20e656e366b736e275302cd5cca08f813901008b8d0a8b50a4828ee4b896",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31003,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31003/_context/criticality.npz",
+      "size_bytes": 9585,
+      "sha256": "e17b50ef1e8cb6046f7e0670368fdb6c52074a215b141d8c4a915ec7fc419c41",
+      "split_role": "train"
+    },
+    {
+      "dataset": "3W",
+      "fraction": 0.1,
+      "outer": 31003,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/3w/f010/outer_31003/rho_selection.json",
+      "size_bytes": 1633,
+      "sha256": "fac773e24ff1b6f10c1175d92880ab6f846eb49b8a89850826b174974e512820",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32001,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32001/_context/audit.json",
+      "size_bytes": 29105,
+      "sha256": "6b2ecec281fc0003a27a5caf6278a2e16144abb8ae357e90de3c20c908873548",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32001,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32001/_context/criticality.npz",
+      "size_bytes": 25811,
+      "sha256": "ad6a64bca2e780e3fc9e1bf814dd71a51c6fcd929f6f301f2156cec0ea74db0d",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32001,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32001/rho_selection.json",
+      "size_bytes": 1645,
+      "sha256": "f6c0323899bcb775fe91b1939477a7a0171626838e4bf96e562421ccbed2435b",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32002,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32002/_context/audit.json",
+      "size_bytes": 29119,
+      "sha256": "4a4d6b53e4a95d5f9b1a9bf1774a07d04d764879f8c2582f86cdb9242f276e10",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32002,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32002/_context/criticality.npz",
+      "size_bytes": 25792,
+      "sha256": "3e74f445cb95c39561e3129df0f8473690b9a330ee36aa77dd7dfb159c0c753c",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32002,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32002/rho_selection.json",
+      "size_bytes": 1645,
+      "sha256": "56ef1cc96c5d584d489f4137f7fe9e31b8d7c8011409d4979ad60ca537bd0b87",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32003,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32003/_context/audit.json",
+      "size_bytes": 29113,
+      "sha256": "77199fb3191c1f4225dbf678f45b66bd74bf9d7df16d551c7ac4a878d3a34d22",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32003,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32003/_context/criticality.npz",
+      "size_bytes": 25815,
+      "sha256": "0989c742a3e76b37778b19a85c909b2804db9efc2ef68dd9de890e3855f794f5",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 1.0,
+      "outer": 32003,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f100/outer_32003/rho_selection.json",
+      "size_bytes": 1646,
+      "sha256": "3da9b9bb1af155311175122d6a5612d65dd92e80517fd6d1effabe4902def6c8",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32001,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32001/_context/audit.json",
+      "size_bytes": 17693,
+      "sha256": "4d624162557d7363f7d6ff124a2d51bb2d167a8986497407f33bfac54945c68b",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32001,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32001/_context/criticality.npz",
+      "size_bytes": 25826,
+      "sha256": "4d0b86c8b294e4aef045bf6a05a1de5503b2e0a642ac0156d8ce3b8aef23554e",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32001,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32001/rho_selection.json",
+      "size_bytes": 1645,
+      "sha256": "7f6b809baa77877d5b95d5c257537e4d9fdd6b0b79e70ed806cba1b6d1d81dfd",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32002,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32002/_context/audit.json",
+      "size_bytes": 17716,
+      "sha256": "ea2ed179783f86003d6590635206ec82c52997f7947ab62bab410c2344c98b95",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32002,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32002/_context/criticality.npz",
+      "size_bytes": 25818,
+      "sha256": "e767802bd6ad52689f7de4c7cd38c389d3137bd19779d5899f46a4bc38d17fed",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32002,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32002/rho_selection.json",
+      "size_bytes": 1646,
+      "sha256": "4a90af15504ee75740ed614112dd1a9ee7dbb16798b553d15212a0a345ea93a5",
+      "split_role": "validation"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32003,
+      "role": "train_context_audit",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32003/_context/audit.json",
+      "size_bytes": 17699,
+      "sha256": "9ec144dda00bafd9dcea6a83c8f2ee0828ac566dfaf17b471d9ac29dc3fa6cbe",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32003,
+      "role": "frozen_criticality",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32003/_context/criticality.npz",
+      "size_bytes": 25814,
+      "sha256": "667396335f7a24204deb65ca44fe80494350d6a957d177302e282738a05164b2",
+      "split_role": "train"
+    },
+    {
+      "dataset": "TEP",
+      "fraction": 0.25,
+      "outer": 32003,
+      "role": "validation_rho_selection",
+      "path": "outputs/qdiffcl_data_regime_v1/DATA_REGIME_GENERALIZATION_V1/tep/f025/outer_32003/rho_selection.json",
+      "size_bytes": 1650,
+      "sha256": "237b8de09f26697ae49de8538b8d9a8560667e94bed1ec7b0d0c8713425b77c2",
+      "split_role": "validation"
+    }
+  ],
+  "v1_preservation_hashes": {
+    "analysis/results/qdiffcl_r_reliability_cells.csv": "8053ab0f5578477c6db34d7ad3db1b15d940c8ad637585193ca2736595d55136",
+    "analysis/results/qdiffcl_r_reliability_validation_association.json": "8785bfa3b1133811840f11ae6a09fc0aa1f6617c122c9b20d6c943c506e7e01e",
+    "analysis/results/qdiffcl_r_reliability_run_manifest.json": "b3a358704e323bd52471cd34c1025cc6b27b1596e60f8629777bd0293718860b",
+    "analysis/results/qdiffcl_r_reliability_artifact_inventory.json": "d71906474db547e48a996281c9c845edc84ccfb4d79be897f6ebaf3aa3077792"
+  },
+  "raw_sources": {
+    "3W": "E:/Datasets/3W/dataset",
+    "TEP": "E:/Datasets/TEP_Rieth2017/raw"
+  }
+}

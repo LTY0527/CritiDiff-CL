@@ -1,0 +1,34 @@
+{
+  "status": "QDIFFCL_R_V2_CORRECTNESS_COMPLETE",
+  "correctness_gate": "PASS",
+  "controller_gate": "QDIFFCL_R_V2_CONTROLLER_NOT_SUPPORTED",
+  "selected_route": "R_DIAGNOSTIC_ONLY_ROUTE",
+  "generated_at": "2026-09-09T18:21:21.978581+00:00",
+  "branch": "exp/qdiffcl-r-reliability-correctness",
+  "starting_v1_head": "33ab658906d982cfb2f6df131472c1c8e153e4e7",
+  "legal_cells": 15,
+  "bootstrap_repeats": 64,
+  "bootstrap_seed": 22042,
+  "association_repeats": 1000,
+  "test_rows_used": false,
+  "tep10": "E_IDENTIFIABILITY_HOLD",
+  "new_model_training": false,
+  "v1_preservation_hashes": {
+    "analysis/results/qdiffcl_r_reliability_cells.csv": "8053ab0f5578477c6db34d7ad3db1b15d940c8ad637585193ca2736595d55136",
+    "analysis/results/qdiffcl_r_reliability_validation_association.json": "8785bfa3b1133811840f11ae6a09fc0aa1f6617c122c9b20d6c943c506e7e01e",
+    "analysis/results/qdiffcl_r_reliability_run_manifest.json": "b3a358704e323bd52471cd34c1025cc6b27b1596e60f8629777bd0293718860b",
+    "analysis/results/qdiffcl_r_reliability_artifact_inventory.json": "d71906474db547e48a996281c9c845edc84ccfb4d79be897f6ebaf3aa3077792"
+  },
+  "artifacts": [
+    "analysis/results/qdiffcl_r_v2_reference_parity.csv",
+    "analysis/results/qdiffcl_r_v2_cells.csv",
+    "analysis/results/qdiffcl_r_v2_validation_safety.csv",
+    "analysis/results/qdiffcl_r_v2_validation_association.json",
+    "analysis/results/qdiffcl_r_v2_within_vs_cross_regime.csv",
+    "analysis/results/qdiffcl_r_v2_environment.json",
+    "analysis/results/qdiffcl_r_v2_artifact_inventory.json",
+    "analysis/results/qdiffcl_r_v2_runtime_status.json",
+    "docs/QDIFFCL_R_V2_CORRECTNESS_AUDIT.md",
+    "docs/QDIFFCL_R_V2_PAPER_IMPLICATIONS.md"
+  ]
+}

@@ -1,5 +1,7 @@
 # CritiDiff-CL
 
+Tag v1.0-submission 于 2026-09-18 补充缺失配置文件并做注释级清理；实验代码与全部结果未变。
+
 Code and frozen evidence for the IEEE BigData Special Session submission *CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion and Domain-Calibrated Contrastive Learning for Heterogeneous Industrial Time Series*.
 
 ## Method overview
@@ -108,21 +110,16 @@ The outer matrix is computationally substantial. `--prepare-only`, `--outer-seed
 
 ## License and citation
 
-**TODO before archival release:** add the MIT `LICENSE` file and replace the copyright holder and year below. The intended license is the MIT License.
+The code and documentation in this repository are released under the [MIT License](LICENSE). Copyright (c) 2026 LTY0527.
 
-```text
-MIT License
-Copyright (c) TODO_YEAR TODO_COPYRIGHT_HOLDER
-```
-
-**TODO before submission:** replace all BibTeX placeholders with the final author list, paper metadata, and public artifact URL.
+The submission is under anonymous review; the citation therefore uses an anonymous author entry until the archival metadata is available.
 
 ```bibtex
-@inproceedings{TODO_CITATION_KEY,
+@inproceedings{anonymous2026critidiffcl,
   title     = {CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion and Domain-Calibrated Contrastive Learning for Heterogeneous Industrial Time Series},
-  author    = {TODO: Author List},
-  booktitle = {TODO: IEEE BigData Special Session Name},
-  year      = {TODO: Year},
-  url       = {TODO: Public Artifact URL}
+  author    = {Anonymous Authors},
+  booktitle = {2026 IEEE International Conference on Big Data (BigData), Special Session on Machine Learning for Big Data},
+  year      = {2026},
+  url       = {https://github.com/LTY0527/CritiDiff-CL}
 }
 ```

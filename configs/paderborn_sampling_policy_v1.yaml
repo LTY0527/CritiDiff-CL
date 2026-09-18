@@ -1,0 +1,12 @@
+version: 1
+status: PADERBORN_FREQUENCY_GRID_HOLD
+policy: null
+target_hz: 64000
+target_duration_seconds: 4.0
+target_length: 256000
+input_channel: vibration_1
+fit_scope: none; fixed acquisition metadata only
+uses_labels: false
+uses_split: false
+uses_validation_or_test_metrics: false
+raw_data_mutated: false

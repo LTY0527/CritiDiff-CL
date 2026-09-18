@@ -23,7 +23,9 @@ spectral_diffusion:
   clip_quantile: 0.999
 training_protocol:
   backbone: TCN
-  contrastive: Hard SupCon
+  # Legacy label "Hard SupCon"; implementation is standard supervised
+  # contrastive loss (see src/losses/supcon.py). Renamed for paper consistency.
+  contrastive: SupCon
   batching: original
   probe: frozen linear probe
   three_w_base_config: configs/3w_diffusion_1seed.yaml

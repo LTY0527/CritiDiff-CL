@@ -18,7 +18,7 @@ This repository was assembled without the original Git history. Every migrated f
 - Paderborn evidence comes from `exp/paderborn-external-validation-v2`, including the negative result.
 - Post-hoc evidence comes from `exp/posthoc-baseline-expansion`; Table S1 copies its Markdown values verbatim.
 - fixed-FAR files are attributed to `exp/cross-domain-validated-safety`. The corresponding remote evidence-chain blobs are identical; the older DRFD branch is incomplete.
-- Core runtime files use the consolidated `exp/paderborn-external-validation-v2` snapshot so that final fixes are preserved. No exploratory configurations, reports, checkpoints, or result directories were migrated.
+- Core runtime files use the consolidated `exp/paderborn-external-validation-v2` snapshot so that final fixes are preserved. On 2026-09-18, configuration files already referenced by the migrated runtime were added from their exact historical Git blobs to close the public tag's static references; no exploratory results, checkpoints, or datasets were added.
 
 ## Artifact path adaptations
 
@@ -36,9 +36,11 @@ This repository was assembled without the original Git history. Every migrated f
 | `exp/paderborn-external-validation-v2@7a25b21` | `scripts/amend_paper_final_protocol.py` | `scripts/amend_paper_final_protocol.py` |
 | `exp/paderborn-external-validation-v2@7a25b21` | `scripts/reconcile_paderborn_sampling.py` | `scripts/reconcile_paderborn_sampling.py` |
 | `artifact assembly` | `generated` | `.gitignore` |
+| `artifact assembly` | `MIT license, copyright holder derived from repository owner` | `LICENSE` |
 | `artifact assembly` | `generated` | `docs/MIGRATION.md` |
 | `artifact assembly` | `generated from the pre-migration verification record` | `docs/TABLE_AUDIT.md` |
 | `artifact assembly` | `generated` | `README.md` |
+| `historical commit 1e0eaaf` | `docs/3w_final_primary_stability.json` | `docs/3w_final_primary_stability.json` |
 | `exp/paper-evidence-chain@848b493` | `outputs/paper_final_protocol/dry_run_manifest.json` | `configs/protocol_manifests/dry_run_manifest.json` |
 | `exp/paper-evidence-chain@848b493` | `outputs/paper_final_protocol/leakage_audit.json` | `configs/protocol_manifests/leakage_audit.json` |
 | `exp/paper-evidence-chain@848b493` | `outputs/paper_final_protocol/pre_amendment_dry_run_manifest.json` | `configs/protocol_manifests/pre_amendment_dry_run_manifest.json` |
@@ -46,6 +48,18 @@ This repository was assembled without the original Git history. Every migrated f
 | `paper-final-freeze-pre-outer-v4@02b1e52` | `outputs/paper_final_freeze/freeze_manifest.json` | `configs/protocol_manifests/freeze_manifest.json` |
 | `local working tree on exp/paderborn-external-validation-v2` | `outputs/fixed_diffusion_views/views_manifest.json` (SHA-256 `1824E2CFA0B86EF71AFE2D38913134EA418D9D7DDA5BBF9E624A496FAFF88EB1`) | `configs/protocol_manifests/fixed_diffusion_views_manifest.json` |
 | `local working tree on exp/paderborn-external-validation-v2` | `outputs/3w_final_primary_grouped_seed42/grouped_split_manifest.json` (SHA-256 `E44B0CA1BEE997086B3B696C6E4CC8304B1A7A8ED197EB3D22AB6F5925A940CE`) | `configs/protocol_manifests/3w_grouped_split_manifest.json` |
+| `historical commit 831d12c` | `configs/3w_clean_baseline.yaml` | `configs/3w_clean_baseline.yaml` |
+| `historical commit ae0d94b` | `configs/3w_clean_collapse_diagnosis.yaml` | `configs/3w_clean_collapse_diagnosis.yaml` |
+| `historical commit 32dd6a2` | `configs/3w_diffusion_1seed.yaml` | `configs/3w_diffusion_1seed.yaml` |
+| `historical commit b30d7c8` | `configs/3w_strict_mask_ablation.yaml` | `configs/3w_strict_mask_ablation.yaml` |
+| `historical commit ea05d27` | `configs/budget_shrinkage_diagnostic.yaml` | `configs/budget_shrinkage_diagnostic.yaml` |
+| `exp/domain-calibrated-budget-routing@322f45a` | `configs/domain_calibrated_budget_routing.yaml` | `configs/domain_calibrated_budget_routing.yaml` |
+| `historical commit 2cb7e2b` | `configs/domain_reliable_safe_frequency_diffusion.yaml` | `configs/domain_reliable_safe_frequency_diffusion.yaml` |
+| `historical commit ed6e152` | `configs/frequency_selective_far_fix.yaml` | `configs/frequency_selective_far_fix.yaml` |
+| `historical commit edb60c5` | `configs/frequency_selective_r1_3seed.yaml` | `configs/frequency_selective_r1_3seed.yaml` |
+| `historical commit b1cc2cb` | `configs/paderborn_sampling_policy_v1.yaml` | `configs/paderborn_sampling_policy_v1.yaml` |
+| `historical commit 008a40a` | `configs/semantic_diffusion_augmentation_audit.yaml` | `configs/semantic_diffusion_augmentation_audit.yaml` |
+| `exp/intra-sample-candidate-ranking@7fb78ba` | `configs/intra_sample_candidate_audit_manifest.json` | `configs/intra_sample_candidate_audit_manifest.json` |
 | `exp/paderborn-external-validation-v2@7a25b21` | `configs/3w_final_primary_grouped.yaml` | `configs/3w_final_primary_grouped.yaml` |
 | `exp/paderborn-external-validation-v2@7a25b21` | `configs/3w_primary_well_split.csv` | `configs/3w_primary_well_split.csv` |
 | `exp/paderborn-external-validation-v2@7a25b21` | `configs/3w_strict_split_manifest.json` | `configs/3w_strict_split_manifest.json` |

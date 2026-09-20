@@ -1,25 +1,36 @@
-# CritiDiff-CL
+# CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion for Industrial Time-Series Contrastive Learning
 
 Tag v1.0-submission 于 2026-09-18 补充缺失配置文件并做注释级清理；实验代码与全部结果未变。
 
-Code and frozen evidence for the IEEE BigData Special Session submission *CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion and Domain-Calibrated Contrastive Learning for Heterogeneous Industrial Time Series*.
+Code and frozen evidence for the IEEE BigData 2026 Special Session submission *CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion for Industrial Time-Series Contrastive Learning*. The method is evaluated on two heterogeneous industrial process datasets under grouped protocols.
 
 ## Method overview
 
-CritiDiff-CL estimates frequency criticality from training-fault discriminativeness (`D`) and early-stage sensitivity (`E`). It uses the resulting continuous mask to apply soft frequency-selective forward diffusion while matching the total spectral perturbation budget of the uniform-diffusion reference. Forward diffusion is used only as a perturbation operator; no denoiser or reverse diffusion model is trained. Domain-Calibrated Budget Routing (DCBR) selects a domain-level budget ratio on inner validation data and does not use the outer test split for routing.
+CritiDiff-CL estimates fault-semantic frequency criticality from fault discriminativeness (`D`) and early-stage sensitivity (`E`). A continuous criticality mask drives budget-matched, soft frequency-selective forward diffusion. Forward diffusion is used only as a perturbation operator: no denoiser is trained and no reverse diffusion is performed. Lightweight Domain-Calibrated Budget Routing (DCBR) selects a domain-level budget ratio using inner validation only; the outer test split is not used for routing.
 
 ## Result snapshot
 
-The values below are copied from the `overall` rows of [`results/outer/paper_final_outer_summary.csv`](results/outer/paper_final_outer_summary.csv) and match Table I of the submission draft. FreRA is the strongest non-CritiDiff-CL baseline by Macro-F1 on both datasets in that table.
+The values below are copied from the frozen [`outer summary`](results/outer/paper_final_outer_summary.csv) and [`paired-bootstrap results`](results/outer/paper_final_outer_bootstrap.csv); no metrics were recomputed.
 
-| Dataset | Method | Macro-F1 |
-|---|---|---:|
-| 3W | FreRA | 0.3334 ± 0.0974 |
-| 3W | FINAL_QDIFFCL | 0.3216 ± 0.0324 |
-| TEP | FreRA | 0.9496 ± 0.0171 |
-| TEP | FINAL_QDIFFCL | 0.9483 ± 0.0254 |
+### 3W
 
-Complete results, paired comparisons, and confidence intervals are provided under [`results/`](results/).
+| Result | Frozen value |
+|---|---:|
+| CritiDiff-CL (FINAL_QDIFFCL) AUPRC | 0.7873 |
+| CritiDiff-CL Early Recall | 0.9114 |
+| CritiDiff-CL Macro-F1 | 0.3216 ± 0.0324 |
+| FreRA Macro-F1 | 0.3334 ± 0.0974 |
+| FreRA − CritiDiff-CL paired 95% CI | [−0.0514, +0.0415] |
+
+CritiDiff-CL has the highest AUPRC and Early Recall and the lowest across-split Macro-F1 SD among the methods in Table I. For the FreRA Macro-F1 comparison, the paired 95% CI includes zero.
+
+### TEP
+
+The frozen main-table Macro-F1 values lie in a narrow range from 0.9458 to 0.9496. CritiDiff-CL reaches an Early Recall of 0.8838, tied with JITTER_SCALING for the highest value in Table I.
+
+TF-C, SoftCLT, AutoTCL, and TS2Vec were added after the frozen main experiments as a recent-baseline extension. On TEP, the frozen [`post-hoc paired results`](results/posthoc_baselines/posthoc_recent_baselines_5seed_bootstrap.csv) show that all four paired Macro-F1 effects relative to FINAL_QDIFFCL are negative, and all four paired 95% confidence intervals exclude zero in favor of CritiDiff-CL.
+
+Complete results, including the 3W post-hoc comparisons, paired effects, and confidence intervals, are retained under [`results/`](results/).
 
 ## Repository map
 
@@ -101,12 +112,12 @@ python -m scripts.summarize_posthoc_baseline_5seed_extension
 
 The outer matrix is computationally substantial. `--prepare-only`, `--outer-seed`, `--max-cells`, and method/dataset filters are available for protocol checks and bounded runs; use `--help` on an entry point for the exact options.
 
-## Known limitations
+## Scope and notes
 
-- The 3W cross-WELL setting has a high false-alarm rate; the grouped outer results should not be read as deployment-ready calibration.
-- DCBR is a validation-routed budget choice, not a guarantee of improvement. Its paired outer confidence intervals cross zero on both datasets.
-- The early-stage statistic `E` depends on true early-stage annotations during training-data analysis. It is not directly available when those stage boundaries are unknown or unreliable.
-- The Paderborn D-only external validation is a negative boundary result and does not support a universal transfer claim.
+- The 3W grouped cross-WELL setting exhibits a relatively high false-alarm rate; the reported results evaluate representation learning under the frozen grouped protocol rather than deployment-time alarm calibration.
+- DCBR is a validation-routed configuration-selection mechanism. Its outer paired confidence intervals include zero on both datasets, and the repository retains these results as part of the frozen evidence.
+- The early-stage statistic `E` requires genuine early-stage annotations during training-data analysis and is only used when such stage information is identifiable.
+- Paderborn D-only external validation is retained as an additional external component experiment outside the v9 paper's main narrative; complete results remain available under [`results/paderborn/`](results/paderborn/).
 
 ## License and citation
 
@@ -116,7 +127,7 @@ The submission is under anonymous review; the citation therefore uses an anonymo
 
 ```bibtex
 @inproceedings{anonymous2026critidiffcl,
-  title     = {CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion and Domain-Calibrated Contrastive Learning for Heterogeneous Industrial Time Series},
+  title     = {CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion for Industrial Time-Series Contrastive Learning},
   author    = {Anonymous Authors},
   booktitle = {2026 IEEE International Conference on Big Data (BigData), Special Session on Machine Learning for Big Data},
   year      = {2026},

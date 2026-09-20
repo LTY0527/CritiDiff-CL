@@ -1,6 +1,6 @@
 # CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion for Industrial Time-Series Contrastive Learning
 
-Tag v1.0-submission 于 2026-09-18 补充缺失配置文件并做注释级清理；实验代码与全部结果未变。
+Tag `v1.0-submission` (2026-09-18) added missing configuration files and applied comment-level cleanup; the experiment code and all results are unchanged.
 
 Code and frozen evidence for the IEEE BigData 2026 Special Session submission *CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion for Industrial Time-Series Contrastive Learning*. The method is evaluated on two heterogeneous industrial process datasets under grouped protocols.
 
@@ -34,19 +34,19 @@ Complete results, including the 3W post-hoc comparisons, paired effects, and con
 
 ## Repository map
 
-[`docs/EVIDENCE.md`](docs/EVIDENCE.md) defines the evidence classes. The table below gives the concrete source files for every paper table.
+[`docs/EVIDENCE.md`](docs/EVIDENCE.md) defines the evidence classes. The table below gives the concrete source files for every result reported in the paper, along with archived analyses retained outside its main narrative.
 
 | Paper item | Evidence and files |
 |---|---|
 | Table I — grouped outer evaluation | [`summary`](results/outer/paper_final_outer_summary.csv), [`raw cells`](results/outer/paper_final_outer_raw.csv), [`paired bootstrap`](results/outer/paper_final_outer_bootstrap.csv), [`groupwise metrics`](results/outer/paper_final_outer_groupwise.csv), and [`manifest`](results/outer/paper_final_outer_manifest.json) |
-| Table II — five-seed reliability audit | [`QDIFFCL results`](results/reliability/qdiffcl_final_5seed_results.csv), [`paired results`](results/reliability/qdiffcl_final_5seed_paired.csv), [`external baselines`](results/reliability/external_baseline_results.csv), and [`DCBR extension ablation`](results/reliability/dcbr_extension_ablation.csv) |
-| Table III — matched-budget allocation ablation | [`validation results`](results/ablation/mechanism_ablation_validation.csv) and [`paired results`](results/ablation/mechanism_ablation_validation_paired.csv) |
-| Table IV — fault-semantic component ablation | [`component results`](results/ablation/qdiffcl_final_component_ablation.csv) and [`report`](results/ablation/qdiffcl_final_component_ablation.md) |
-| Table V — Paderborn external validation | [`summary`](results/paderborn/paderborn_external_v2_summary.csv), [`paired bootstrap`](results/paderborn/paderborn_external_v2_paired_bootstrap.csv), [`OOF bearings`](results/paderborn/paderborn_external_v2_oof_bearings.csv), and [`protocol audit`](results/paderborn/paderborn_external_v2_protocol_audit.json) |
-| Table VI — critical-ratio sensitivity | [`results`](results/ablation/paper_ratio_sensitivity.csv) and [`report`](results/ablation/paper_ratio_sensitivity.md) |
-| Table VII — efficiency | [`benchmark`](results/efficiency/paper_efficiency.csv) and [`report`](results/efficiency/paper_efficiency.md) |
-| Table S1 — recent post-hoc baselines | [`supplementary table`](supplementary/Table_S1.md), [`raw cells`](results/posthoc_baselines/posthoc_recent_baselines_5seed_raw.csv), [`summary`](results/posthoc_baselines/posthoc_recent_baselines_5seed_summary.csv), and [`paired bootstrap`](results/posthoc_baselines/posthoc_recent_baselines_5seed_bootstrap.csv) |
-| DCBR rho routing | [`outer raw cells`](results/outer/paper_final_outer_raw.csv) and [`outer manifest`](results/outer/paper_final_outer_manifest.json) |
+| Single-split five-seed reliability audit (reported inline in the paper) | [`QDIFFCL results`](results/reliability/qdiffcl_final_5seed_results.csv), [`paired results`](results/reliability/qdiffcl_final_5seed_paired.csv), [`external baselines`](results/reliability/external_baseline_results.csv), and [`DCBR extension ablation`](results/reliability/dcbr_extension_ablation.csv) |
+| Table II — matched-budget allocation ablation | [`validation results`](results/ablation/mechanism_ablation_validation.csv) and [`paired results`](results/ablation/mechanism_ablation_validation_paired.csv) |
+| Table III — fault-semantic component ablation | [`component results`](results/ablation/qdiffcl_final_component_ablation.csv) and [`report`](results/ablation/qdiffcl_final_component_ablation.md) |
+| Archived analysis — Paderborn external component validation (retained in full; outside the paper's main narrative) | [`summary`](results/paderborn/paderborn_external_v2_summary.csv), [`paired bootstrap`](results/paderborn/paderborn_external_v2_paired_bootstrap.csv), [`OOF bearings`](results/paderborn/paderborn_external_v2_oof_bearings.csv), and [`protocol audit`](results/paderborn/paderborn_external_v2_protocol_audit.json) |
+| Table IV — critical-ratio sensitivity | [`results`](results/ablation/paper_ratio_sensitivity.csv) and [`report`](results/ablation/paper_ratio_sensitivity.md) |
+| Table V — efficiency | [`benchmark`](results/efficiency/paper_efficiency.csv) and [`report`](results/efficiency/paper_efficiency.md) |
+| Recent post-hoc baselines (reported inline in the paper) | [`supplementary table`](supplementary/Table_S1.md), [`raw cells`](results/posthoc_baselines/posthoc_recent_baselines_5seed_raw.csv), [`summary`](results/posthoc_baselines/posthoc_recent_baselines_5seed_summary.csv), and [`paired bootstrap`](results/posthoc_baselines/posthoc_recent_baselines_5seed_bootstrap.csv) |
+| DCBR ρ routing (Sec. IV-D) | [`outer raw cells`](results/outer/paper_final_outer_raw.csv) and [`outer manifest`](results/outer/paper_final_outer_manifest.json) |
 
 The per-file migration lineage is recorded in [`docs/MIGRATION.md`](docs/MIGRATION.md). The frozen table and paired-CI checks are recorded in [`docs/TABLE_AUDIT.md`](docs/TABLE_AUDIT.md).
 

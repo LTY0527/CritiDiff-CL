@@ -1,5 +1,7 @@
 # Q-DiffCL Post-hoc Recent-Baseline Protocol
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Status: `POSTHOC_BASELINE_AUDIT_IN_PROGRESS`.
 
 ## Provenance boundary

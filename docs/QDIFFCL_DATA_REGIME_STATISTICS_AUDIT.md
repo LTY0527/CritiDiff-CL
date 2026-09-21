@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime Statistics Audit
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Status: `PAIRED_ESTIMANDS_DISAMBIGUATED`; no model was retrained.
 
 The former CSV placed a cell-level paired point estimate beside a group-bootstrap interval. Those quantities use different estimands:

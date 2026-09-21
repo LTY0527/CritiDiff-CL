@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime Fairness Audit
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Current status: `DATA_REGIME_SANITY_GO`.
 
 The six frozen outer manifests were copied into a dedicated namespace with their source hash and unchanged train/validation/test group identities. Training subsets are selected at 3W instance and TEP Run level before windowing. Selection is deterministic and independent of model seed.

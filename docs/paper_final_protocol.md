@@ -1,5 +1,7 @@
 # Q-DiffCL Paper-final Protocol
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 状态：`PAPER_FINAL_PROTOCOL_AMENDMENT_GO`。WindowRef coverage 修订发生在任何 outer training/metric 之前。
 
 ## 3W repeated grouped outer holdout（revised）

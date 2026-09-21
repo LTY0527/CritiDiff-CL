@@ -1,5 +1,7 @@
 # Q-DiffCL R-v2 Paper Implications
 
+> **Historical record (pre-v10).** This audit uses the v9-era WHERE / HOW TO ALLOCATE / HOW MUCH framing in which DCBR was the third contribution. In manuscript v10.6 the three contributions are fault-semantic frequency criticality, continuous frequency-selective forward diffusion, and matched spectral perturbation budget; DCBR is an optional training-time validation calibration extension. The audit content below is unchanged and remains valid as a historical record.
+
 Selected route: **R_DIAGNOSTIC_ONLY_ROUTE**
 
 - D+E: retained unchanged as the fault-semantic criticality/WHERE mechanism.

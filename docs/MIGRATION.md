@@ -1,5 +1,7 @@
 # Migration lineage
 
+> **Historical record (pre-v10).** This lineage preserves legacy paper-table names where they identify migrated source artifacts. Table S1 and the associated post-hoc baseline extension are repository-only evidence and are not part of the manuscript v10.6 table sequence. The lineage content below is unchanged.
+
 This repository was assembled without the original Git history. Every migrated file is listed below with its selected source branch and source path. Files marked “artifact assembly” were created for the public artifact and contain no experimental measurements.
 
 ## Pre-migration safety gates

@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime Report
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Status: `QDIFFCL_DATA_REGIME_V1_COMPLETE`.
 
 TEP 10% is excluded from the primary D+E matrix by the preregistered E-identifiability hold.

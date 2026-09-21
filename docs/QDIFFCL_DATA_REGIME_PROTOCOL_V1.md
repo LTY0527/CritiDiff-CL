@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime Protocol V1
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Status before the lock commit: `DATA_REGIME_SANITY_GO`.
 
 This protocol measures **training-data scarcity under a fixed validation protocol**. It is not a fully label-scarce setting. The validation set is deliberately kept fixed to isolate training-side information scarcity; it is never used for parameter fitting, and is used only for frozen early stopping, threshold selection, and validation-only rho selection. Outer test groups remain frozen and are read once after all selection is locked.

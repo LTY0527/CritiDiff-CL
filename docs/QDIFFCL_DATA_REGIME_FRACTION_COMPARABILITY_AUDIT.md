@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime Fraction Comparability Audit
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Status: `NESTED_SOURCE_UNITS_CONFIRMED_WITH_COMPOSITION_CONFOUND`.
 
 All six dataset/outer manifests satisfy strict `10% ⊂ 25% ⊂ 100%` nesting. Sampling is deterministic, seed-independent, and performed on source units before windowing. Detailed per-class and per-group counts are stored in `qdiffcl_data_regime_fraction_composition.csv` and `qdiffcl_data_regime_fraction_groups.csv`.

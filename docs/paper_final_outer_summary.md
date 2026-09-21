@@ -1,5 +1,7 @@
 # Q-DiffCL Paper-final Outer Evaluation
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 状态：完整冻结 outer matrix 已执行；下表先在每个 outer split 内汇总 5 个 model seeds，再汇总 3 个 splits。
 
 | Dataset | Method | Macro-F1 | AUPRC | FAR | Early Recall | Delay | Worst cell |

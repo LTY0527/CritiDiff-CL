@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime E Identifiability Audit
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 Threshold: every E-required fault class requires at least 2 independent onset-bearing and early-stage training units.
 
 Status: `E_IDENTIFIABILITY_HOLD`

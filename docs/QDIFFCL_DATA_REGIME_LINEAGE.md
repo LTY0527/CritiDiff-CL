@@ -1,5 +1,7 @@
 # Q-DiffCL Data-Regime Evidence Lineage
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 - Base branch: `exp/posthoc-baseline-expansion`
 - Base commit: `ea7909987998a865b7cfdf9467465e8c13ea288c`
 - Development branch: `exp/qdiffcl-data-regime`

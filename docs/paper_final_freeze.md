@@ -1,5 +1,7 @@
 # Q-DiffCL Paper-final Freeze
 
+> **Historical record (pre-v10).** This document preserves the former Q-DiffCL working-title terminology. The current manuscript and repository name are CritiDiff-CL; the content below is unchanged and remains valid as a historical record.
+
 状态：`PAPER_FINAL_FREEZE_READY`。这是 pre-outer 冻结快照；没有训练 outer model，也没有读取 outer-test metric。
 
 ## Version

@@ -1,31 +1,41 @@
 # Paper Evidence Matrix
 
+## Evidence used in manuscript v10.6
+
 | Claim | Evidence | Status |
 |---|---|---|
-| Selective > Uniform | 3-seed validation matched-budget ablation | `SUPPORTED ON 3W; NOT SUPPORTED ON TEP` |
-| D/E captures fault semantics | D_ONLY/E_ONLY/FINAL + heatmaps | `SUPPORTED with D-primary/E-complementary wording` |
-| Soft allocation matters | Hard vs Soft 3-seed validation ablation | `SUPPORTED ON 3W; NOT SUPPORTED ON TEP` |
-| Gain is not from less noise | Soft matched vs unmatched + equal Uniform budget | `SUPPORTED ON 3W; NOT SUPPORTED ON TEP` |
-| Diffusion and contrastive learning are complementary | 2×2 CE_REP/Hard-SupCon × NoAug/FINAL, paired 3-seed interaction | `SUPPORTED ON 3W; INVERSE INTERACTION ON TEP / DATASET-DEPENDENT` |
-| DCBR mitigates over-augmentation | TEP FINAL/DCBR/SCALING 5-seed development evidence | `SUPPORTED AS DEVELOPMENT EVIDENCE` |
-| Cross-WELL benefit | per-WELL replay + bootstrap CI | `PARTIAL; CI crosses zero` |
-| Practicality | canonical training time, peak GPU memory, parameters, 3× augmentation/inference benchmark | `SUPPORTED WITH FRERA AUGMENTATION-TIMING LIMITATION` |
-| Early-fault score rise | 40 TEP fault-run checkpoint replay, onset alignment and bootstrap bands | `SUPPORTED ON TEP AS DEVELOPMENT EVIDENCE` |
-| Critical-ratio sensitivity | 0.20/0.30/0.40, dual-dataset 3-seed downstream results with matched-budget audit | `SUPPORTED AS DATASET-DEPENDENT SENSITIVITY; 0.30 IS A TEP LOCAL TROUGH` |
-| External automated augmentation coverage | AutoDA-Timeseries source/protocol audit | `METHOD_NATIVE_ONLY; SUPPLEMENTARY CANDIDATE` |
-| Recent time-series baseline comparison | AutoTCL, SoftCLT, TF-C, and TS2Vec over three grouped outer splits and five matched seeds; paired 2,000-resample WELL/Run bootstrap | `POST-HOC FIVE-SEED EXTENSION COMPLETE; TRACK A/B BOUNDARIES APPLY` |
-| Industrial diffusion+contrastive DiCL baseline | GitHub/scholarly-source feasibility audit | `NOT FAIRLY REPRODUCIBLE / DO NOT RANK` |
-| Limited-data robustness | Complete legal grouped matrix: 3W 100/25/10%; TEP 100/25%; TEP10 E-identifiability hold | `COMPLETE LEGAL MATRIX; DATASET/REGIME-DEPENDENT; NO UNIVERSAL SCARCITY BENEFIT` |
-| Missingness robustness | TEP MCAR30 only; 3W native missingness | `PARTIAL` |
-| Generalization | completed frozen nested/grouped outer matrix; split-first aggregation and 2,000× WELL/Run bootstrap | `OUTER EVALUATION COMPLETE; DATASET-SPECIFIC EFFECTS IN paper_final_outer_summary.md` |
-| Criticality reliability | R-v1 map-noise audit superseded by 15-cell true grouped-bootstrap R-v2 | `R-v2 CORRECTNESS PASS; DIAGNOSTIC ONLY; NOT A CONTROLLER` |
-| Paderborn external validation | 1200/1200 grid audit and 45-cell bearing-grouped D-only matrix; paired D-only vs Uniform Macro-F1 delta -0.0030, 95% CI [-0.0491, 0.0538] | `D-ONLY EXTERNAL NO SUPPORT; VALID TRANSFER BOUNDARY EVIDENCE` |
+| Grouped evaluation | Completed nested/grouped outer matrix with split-first aggregation and 2,000× WELL/Run bootstrap | `TABLE I; COMPLETE; DATASET-SPECIFIC EFFECTS` |
+| Selective versus Uniform allocation | 3-seed validation matched-budget ablation | `TABLE II; SUPPORTED ON 3W` |
+| Soft allocation matters | Hard versus Soft 3-seed validation ablation | `TABLE II; SUPPORTED ON 3W` |
+| Gain is not explained only by less total noise | Soft matched versus unmatched plus equal-budget Uniform | `TABLE II; SUPPORTED ON 3W` |
+| D/E captures fault semantics | D-only/E-only/D+E component ablation | `TABLE III; D PRIMARY, E COMPLEMENTARY` |
+| Critical-ratio sensitivity | 0.20/0.30/0.40 3W results | `TABLE IV; LOCAL SENSITIVITY, NOT A UNIVERSAL OPTIMUM` |
+| Practicality | Canonical timing, peak GPU memory, parameters, and repeated augmentation/inference benchmark | `TABLE V; FRERA AUGMENTATION-TIMING LIMITATION RETAINED` |
+| DCBR validation calibration | Fixed-split five-seed evidence and outer route records | `SEC. IV-D; OPTIONAL TRAINING-TIME EXTENSION` |
 
-## Frozen contribution mapping
+## Repository-only / not in v10.6 main text
 
-- Contribution 1: Fault-Semantic Criticality Modeling — **WHERE**.
-- Contribution 2: Soft Criticality-Aware Selective Diffusion — **HOW TO ALLOCATE**.
-- Contribution 3: Domain-Calibrated Budget Routing — **HOW MUCH**.
-- R-v2 is reliability diagnostic/boundary analysis, not a controller or fourth forward module.
+| Evidence | Result status |
+|---|---|
+| TEP selective/soft matched-budget mechanism | `NOT SUPPORTED CONSISTENTLY ON TEP` |
+| Diffusion and contrastive-learning interaction | 3W positive interaction `+0.1483`, 3/3 positive; TEP inverse interaction `-0.0206`, 0/3 positive | `DATASET-DEPENDENT` |
+| TEP critical-ratio sensitivity | 0.30 is a local trough | `REPOSITORY-ONLY; FROZEN VALUE NOT REOPENED` |
+| DCBR mitigation of over-augmentation | TEP fixed-split development evidence | `REPOSITORY-ONLY CALIBRATION EVIDENCE` |
+| Cross-WELL benefit | Per-WELL replay and bootstrap | `PARTIAL; CI INCLUDES ZERO` |
+| Early-fault score rise | 40 TEP fault-run checkpoint replay with onset alignment and bootstrap bands | `REPOSITORY-ONLY DEVELOPMENT EVIDENCE` |
+| AutoDA-Timeseries | Source/protocol audit | `METHOD-NATIVE ONLY; REPOSITORY-ONLY` |
+| AutoTCL, SoftCLT, TF-C, and TS2Vec | Three grouped outer splits, five matched seeds, paired group bootstrap | `POST-HOC COMPLETE; REPOSITORY-ONLY` |
+| Industrial diffusion+contrastive DiCL | GitHub/scholarly-source feasibility audit | `NOT FAIRLY REPRODUCIBLE / DO NOT RANK` |
+| Limited-data robustness | 3W 100/25/10%; TEP 100/25%; TEP10 E-identifiability hold | `COMPLETE LEGAL MATRIX; DATASET/REGIME-DEPENDENT` |
+| Missingness robustness | TEP MCAR30 only; 3W native missingness | `PARTIAL; REPOSITORY-ONLY` |
+| Criticality reliability | R-v1 superseded by 15-cell grouped-bootstrap R-v2 | `CORRECTNESS PASS; DIAGNOSTIC ONLY; NOT A CONTROLLER` |
+| Paderborn external validation | 1200/1200 grid audit and 45-cell bearing-grouped D-only matrix; paired D-only versus Uniform Macro-F1 delta `-0.0030`, 95% CI `[-0.0491, 0.0538]` | `NO EXTERNAL SUPPORT; REPOSITORY-ONLY BOUNDARY EVIDENCE` |
 
-任何标为 UNSUPPORTED/PENDING 的 claim 不得进入摘要、贡献列表或结论。SVR 保持 `NO_GO_SVR`，不进入最终方法。0.30 因方法冻结保持不变，但不得表述为 TEP 上由本轮 sensitivity 证明的局部最优值。
+## Current v10.6 contribution mapping
+
+- Contribution 1: Fault-Semantic Frequency Criticality.
+- Contribution 2: Continuous Frequency-Selective Forward Diffusion.
+- Contribution 3: Matched Spectral Perturbation Budget.
+- DCBR: optional training-time validation calibration extension.
+
+Unsupported, partial, or repository-only claims must not enter the v10.6 abstract, contribution list, main tables, or conclusion. SVR remains `NO_GO_SVR` and is excluded from the method.

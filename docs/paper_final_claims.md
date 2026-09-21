@@ -1,39 +1,61 @@
-# Q-DiffCL Paper-final Claims
+# CritiDiff-CL v10.6 Paper Claims
 
-## SAFE TO CLAIM
+## Core method claims
 
-- Outer 结果不支持跨两个数据集都成立的无条件性能优越性表述；可安全陈述已完成冻结 nested/grouped evaluation。
+1. **Fault-Semantic Frequency Criticality.** Fault discriminativeness `D` is estimated over independent Run/WELL units. Early-stage sensitivity `E` is added only when genuine early-stage information is identifiable, producing channel-frequency criticality.
+2. **Continuous Frequency-Selective Forward Diffusion.** Continuous criticality is mapped to per-frequency DDPM forward-perturbation strength so that highly critical frequencies receive weaker perturbations. No denoiser is trained and no reverse sampling is performed.
+3. **Matched Spectral Perturbation Budget.** Selective and uniform diffusion are matched in total perturbation variance in the standardized log-spectral domain, separating frequency allocation from total perturbation magnitude.
 
-## DATASET-DEPENDENT CLAIM
+## Calibration extension
 
-- 3W: FINAL 与 NO_AUG 的差异不确定（paired Δ NO_AUG-FINAL=-0.0238, 95% CI [-0.0376, +0.0069]）。
-- TEP: FINAL 与 NO_AUG 的差异不确定（paired Δ NO_AUG-FINAL=-0.0003, 95% CI [-0.0012, +0.0006]）。
-- selective/soft matched-budget mechanism 的优势仍是 3W 支持、TEP 不一致；DCBR 的作用按数据集分别表述。
+DCBR is validation-routed and training-time only. It selects `rho` using validation data and adds zero inference parameters. It is not a core contribution in manuscript v10.6.
 
-## DEVELOPMENT EVIDENCE ONLY
+## Main-paper evidence
 
-- 2×2 contrastive interaction、critical-ratio sensitivity、TEP onset trajectory 与机制 ablation 没有在 outer matrix 重跑。
+### 3W grouped outer
 
-## LIMITATION
+- CritiDiff-CL AUPRC: `0.7873`.
+- CritiDiff-CL Early Recall: `0.9114`.
+- Across-split Macro-F1 SD: `0.0324`.
+- These are the best values in their respective columns in the main experimental comparison.
 
-- soft allocation 跨数据集不一致；critical_ratio=0.30 不是 universal optimum。
-- limited-data legal matrix 已完成但结论依赖 dataset/regime，不支持 universal scarcity benefit；更广 missingness robustness 与 FRERA augmentation-only timing 仍缺失。
-- AutoDA 仅 method-native supplementary；DiCL 存在公平复现缺口。
+### 3W Macro-F1 boundary
 
-## DO NOT CLAIM
+- FreRA Macro-F1: `0.3334`.
+- CritiDiff-CL Macro-F1: `0.3216`.
+- Paired delta, FreRA minus CritiDiff-CL: `+0.0118`.
+- Paired 95% CI: `[-0.0514, +0.0415]`; the interval includes zero.
 
-- 不宣称 universal Soft superiority、universal cross-WELL superiority、0.30 universal optimum，或未评估的 robustness。
+### TEP
 
-## 2026-09-10 CONSOLIDATION
+- CritiDiff-CL Macro-F1: `0.9483`.
+- Main-table Macro-F1 range: `0.9458–0.9496`.
+- CritiDiff-CL Early Recall: `0.8838`, tied for the highest value in the main experimental comparison.
 
-- Data scarcity: the complete legal matrix covers 3W 100/25/10% and TEP
-  100/25%; TEP10 remains `E_IDENTIFIABILITY_HOLD`. Effects are dataset- and
-  regime-dependent, so no universal scarcity benefit is claimed.
-- R-v2: true grouped-bootstrap correctness passed; it is diagnostic evidence,
-  not a controller and not a fourth forward module.
-- Paderborn: frequency-grid audit and the frozen 45-cell D-only evaluation are
-  complete. D-only did not outperform matched-budget Uniform diffusion (paired
-  Macro-F1 delta -0.0030, 95% CI [-0.0491, 0.0538]); report this as external
-  transfer boundary evidence, not support for universal selective superiority.
-- Contributions remain WHERE (criticality), HOW TO ALLOCATE (soft selective
-  diffusion), and HOW MUCH (DCBR).
+### Matched-budget mechanism
+
+- Uniform diffusion Macro-F1: `0.4258`.
+- Hard selective diffusion Macro-F1: `0.4462`.
+- Soft selective diffusion Macro-F1: `0.4870`; its paired change versus Uniform is positive for `3/3` seeds.
+- Soft selective diffusion without budget matching Macro-F1: `0.4358`.
+
+### D/E ablation
+
+| Variant | Macro-F1 | AUPRC | FAR |
+|---|---:|---:|---:|
+| Uniform | 0.4542 | 0.5020 | 0.4288 |
+| D-only | 0.5128 | 0.5638 | 0.3749 |
+| E-only | 0.4628 | 0.5081 | 0.3841 |
+| D+E | 0.5188 | 0.5635 | 0.3555 |
+
+### DCBR
+
+DCBR is reported only as a calibration extension. In the fixed single-split TEP five-seed audit, Macro-F1 changes from `0.8903` to `0.9024`, with positive deltas for `5/5` seeds. Grouped outer routing selects `rho` values `0.00/0.50/0.25` on 3W and `0.50/0.25/0.75` on TEP. Its paired outer confidence intervals include zero on both datasets: 3W `[-0.0290, +0.0118]` and TEP `[-0.0013, +0.0020]`.
+
+## Repository-only evidence
+
+Paderborn external validation, recent post-hoc baselines, limited-data experiments, missingness analysis, criticality reliability, early-fault trajectory, fixed-FAR, and other development evidence remain preserved but do not enter the v10.6 manuscript text.
+
+## Do not claim
+
+Do not claim universal superiority, universal selective superiority, universal cross-domain transfer, universal DCBR improvement, `critical_ratio=0.30` as a universal optimum, or that CritiDiff-CL exceeds every baseline on every metric.

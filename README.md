@@ -143,7 +143,7 @@ The submission is under anonymous review; the citation therefore uses an anonymo
 
 ```bibtex
 @inproceedings{anonymous2026critidiffcl,
-  title     = {CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion and Domain-Calibrated Contrastive Learning for Heterogeneous Industrial Time Series},
+  title     = {CritiDiff-CL: Fault-Semantic Frequency-Selective Diffusion for Industrial Time-Series Contrastive Learning},
   author    = {Anonymous Authors},
   booktitle = {2026 IEEE International Conference on Big Data (BigData), Special Session on Machine Learning for Big Data},
   year      = {2026},
